@@ -3,10 +3,10 @@ echo $(dirname $0)
 python3 -m pip install requests
 cd $(dirname $0)/scripts/
 python3 8worldsg.py > ../streams/8worldsg.m3u8
-python3 C5N.py > ../Streams/C5N.m3u8
-python3 Canal26.py > ../Streams/Canal26.m3u8
+python3 C5N.py > ../streams/C5N.m3u8
+python3 Canal26.py > ../streams/Canal26.m3u8
 python3 caravancdrama.py > ../streams/caravancdrama.m3u8
-python3 LaNacion.py > ../Streams/LaNacion.m3u8
+python3 LaNacion.py > ../streams/LaNacion.m3u8
 python3 cctvdocumentary.py > ../streams/cctvdocumentary.m3u8
 python3 cctvdrama.py > ../streams/cctvdrama.m3u8
 python3 cctvhitdrama.py > ../streams/cctvhitdrama.m3u8
