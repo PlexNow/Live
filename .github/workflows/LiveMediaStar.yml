@@ -1,0 +1,31 @@
+name: Live Media Star
+on:
+    schedule:
+        - cron: "0 0/3 * * *"
+    pull_request:
+        branches:
+            - main
+    workflow_dispatch:
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - name: Set configuration variables
+              run: |
+                git pull
+                git config --local user.email "action@github.com"
+                git config --local user.name "GitHub Action"
+            - name: Run shell script
+              run: |
+                pwd
+                chmod +x LiveMediaFiles.sh
+                ./LiveMediaFiles.sh
+            - name: Add changes to staging area
+              run: |
+                git add -A
+                ls -la 
+            - name: Commit & push
+              run: |
+                git commit -m "Live Media Files"
+                git push
