@@ -37,6 +37,7 @@ def grab(url):
     print(hd[st:].strip())
 
 print("#EXTM3U")
+print('#EXT-X-INDEPENDENT-SEGMENTS')
 print("#EXT-X-STREAM-INF:BANDWIDTH=2969452")
 s = requests.Session()
 with open("../information/ZKL0D307Jd0F7k4dm9o13sL7pDGD8sIIq510p0928JpQ2914912347129866029275628957gu389gii48t8g92oig84y6hy8h83oguh6re9i3orfit4urofg4uurur7salk3jofj39ajlij09409jbhbdfj9d489tjlijhiojh598efjm914D.txt") as f:
